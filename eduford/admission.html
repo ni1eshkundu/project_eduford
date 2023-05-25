@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <title>University Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #fa8072;
+            width: 100%;
+
+        }
+        h1 {
+            text-align: center;
+        }
+        hr{
+            border: 1px solid #a9a9a9;
+            margin-bottom: 2px;
+        }
+        .personal {
+            justify-content: space-between;
+        }
+        textarea{
+            width: 100%;
+        }
+        
+
+        .container {
+            margin: 20px 200px 0;
+            padding: 20px 10px;
+            border: 4px solid black;
+            border-radius: 5px;
+            background-color: beige;
+            box-sizing: border-box;
+        }
+        .personal input{
+            padding: 10px 0;
+            width: 100%;
+            margin: 8px 0;
+            display:inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .address input{
+            padding:5px 0;
+            margin: 5px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        table{
+            font-size: 14px;
+            margin: 20px 150px;
+            padding: 0;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        table input{
+            width: 80%;
+        }
+        .submit{
+            margin: 12px 0 0 ;
+            padding: 0;
+            text-align: center;
+        }
+        .btn {
+            background-color: #018a06ea;
+            padding: 7px 15px;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav class="navbar">
+            <a href="index.html"><img src="images/logo.png" alt="LOGO"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="admission.html">ADMISSION</a></li>
+                    <li><a href="notice.html">NOTICE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Apply For Admission</h1>
+    </section>
+    <!-- --------admission--------- -->
+    <div class="container">
+        <form action="admission.php" method="post">
+            <h1>Applicaton Form</h1>
+            <hr><br><br>
+            <div class="personal">
+                <label><b>First Name : </b>
+                    <input type="text" name="first_name" placeholder=" Enter your first name" required></label>
+                    <label><b> Last Name : </b></label>
+                        <input type="text" name="last_name" placeholder=" Enter your last name" required></label>
+                    <br><br>
+                <label><b>Father's Name : </b>
+                    <input type="text" name="fathers_name" placeholder=" Enter your father's name" required></label>
+                
+                <label><b>Mother's Name : </b>
+                    <input type="text" name="mothers_name" placeholder=" Enter your mother's name" required></label>
+            </div>
+            <br>
+            <br>
+            <div class="info">
+                
+                <span><b>Gender : &ensp;</b></span>
+                <label><input type="radio" name="gender" value="male" required><b>Male </b></label>
+                <label><input type="radio" name="gender" value="female" required><b>Female </b></label>
+                <label><input type="radio" name="gender" value="male" required><b>Others </b></label>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <label><b>Date of Birth : </b>
+                    <input type="date" name="dob" required></label>
+            </div>
+            <br><br>
+            <br>
+            <br>
+            <div class="address">
+                <label><b>Current Address : </b></label><br><br>
+                <textarea name="current_address" cols="10" rows="5" placeholder=" Enter your current address..." required></textarea>
+                <br><br>
+                <label><b>PIN : </b></label>
+                <input type="text" name="c_pin" placeholder=" Enter your PIN number" required>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <label><b>District : </b></label>
+                <input type="text" name="c_district" placeholder=" Enter your district" required>
+                <br><br>
+                <label><b>State : </b></label>
+                <input type="text" name="c_state" placeholder=" Enter your state" required>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <label><b>Country : </b></label>
+                <input type="text" name="c_country" placeholder=" Enter your country" required>
+                <br>
+                <br><br>
+            </div>
+            <div class="address">
+                <label><b>Permenant Address : </b></label><br><br>
+                <textarea name="permenant_address" cols="10" rows="5" placeholder=" Enter your permenant address..." required></textarea>
+                <br><br>
+                <label><b>PIN : </b></label>
+                <input type="text" name="p_pin" placeholder=" Enter your PIN number" required>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <label><b>District : </b></label>
+                <input type="text" name="p_district" placeholder=" Enter your district" required>
+                <br><br>
+                <label><b>State : </b></label>
+                <input type="text" name="p_state" placeholder=" Enter your state" required>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <label><b>Country : </b></label>
+                <input type="text" name="p_country" placeholder=" Enter your country" required>
+                <br><br>
+                <br>
+            </div>
+            <div class="conatct address">
+                <label><b>Email Id : </b></label>
+                <input type="email" name="email" placeholder=" Enter your email id" required>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <label><b>Phone No : </b></label>
+                <input type="text" name="phone" placeholder=" Enter your phone no." required>
+            </div>
+            <br><br><br>
+            <div class="qualification">
+                <label><b>Qualification : </b>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <table border="1">
+                    <tr>
+                        <th>Standard</th>
+                        <th>Percentage</th>
+                        
+                    </tr>
+
+                    <tr>
+                        <td>Madhyamik</td>
+                        <td><input type="text" name="mp_percentage" required> %</td>
+                    </tr>
+
+                    <tr>
+                        <td>Higher Secondary</td>
+                        <td><input type="text" name="hs_percentage" required> %</td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td>Graduation(if applicable)</td>
+                        <td><input type="text" name="hon_percentage"> %</td>
+                        
+                    </tr>
+                </table></label>
+            </div>
+            <div class="course">
+                <label><b>Select The Course For Which You Want to Apply : </b></label>
+                <select name="course" id="course" required>
+                    <option value="">Select</option>
+                    <option value="M.A in Bengali">M.A in Bengali</option>
+                    <option value="M.Sc in Chemistry">M.Sc in Chemistry</option>
+                    <option value="M.Sc in Physics">M.Sc in Physics</option>
+                    <option value="M.Sc in Mathematics">M.Sc in Mathematics</option>
+                    <option value="M.Sc in Botany">M.Sc in Botany</option>
+                    <option value="M.Sc in Zoology">M.Sc in Zoology</option>
+                    <option value="M.A in English">M.A in English</option>
+                    <option value="M.A in Geography">M.A in Geography</option>
+                    <option value="M.A in History">M.A in History</option>
+                    <option value="M.A in Political Science">M.A in Political Science</option>
+                    <option value="B.A in Bengali">B.A in Bengali</option>
+                    <option value="B.Sc in Botany">B.Sc in Botany</option>
+                    <option value="B.Sc in Chemistry">B.Sc in Chemistry</option>
+                    <option value="B.A in English">B.A in English</option>
+                    <option value="B.A in Geography">B.A in Geography</option>
+                    <option value="B.A in History">B.A in History</option>
+                    <option value="B.Sc in Mathematics">B.Sc in Mathematics</option>
+                    <option value="B.Sc in Physics">B.Sc in Physics</option>
+                    <option value="B.Sc in Zoology">B.Sc in Zoology</option>
+                    <option value="MBA">MBA</option>
+                    <option value="MCA">MCA</option>
+                    <option value="BCA">BCA</option>
+                    <option value="Diploma in Pharmacy">Diploma in Pharmacy</option>
+                    <option value="B.Sc in Pharmacy">B.Sc in Pharmacy</option>
+                </select>
+            </div>
+            <div class="submit">
+                <input type="submit" class="btn" value="Submit">
+                <input type="reset" class="btn" value="Reset">
+            </div>
+
+        </form>
+    </div>
+
+
+    <!-- ---------footer------- -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>The University of Eduford is a collegiate research university in India. It was established by the West Bengal
+            government. The total area of university campuses in the semi-rural areas is 12.88 acres This land is
+            donated by Jagannath Kishore College, Purulia. The campus is located in the Purulia district, beside the
+            Purulia-Ranchi national highway (NH 32). It is 7 Km from the Purulia railway station and 3 Km from the
+            Purulia central bus stand. Ajodhya Hills is prominently visible from the university campus.
+
+            <br />We are famous for our research exellence and Innovation, and home to some of the most talented
+            researchers in the India.
+        </p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+    </section>
+    <footer class="footer1">Copyright &copy; 2022 www.eduforduniv.com - All rights reserved</footer>
+</body>
+
+</html>
